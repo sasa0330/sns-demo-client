@@ -12,7 +12,7 @@
   }
   ```
 */
-import Input from "../atoms/input";
+import Input from "../atoms/Input";
 type Props = {
   label: string;
   type: string;
