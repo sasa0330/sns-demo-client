@@ -40,6 +40,8 @@ const userProfile = ({ profile, posts }: Props) => {
                 className="w-20 h-20 rounded-full mr-4"
                 src={profile.profileImgUrl}
                 alt="User Avatar"
+                width={100}
+                height={100}
               />
               <div>
                 <h2 className="text-2xl font-semibold mb-1">

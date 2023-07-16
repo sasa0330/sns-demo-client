@@ -18,6 +18,8 @@ export default function Post(props: Props) {
               className="w-10 h-10 rounded-full mr-2"
               src={post.autor.profile?.profileImgUrl}
               alt="User Avatar"
+              width={100}
+              height={100}
             />
           </Link>
           <div>
