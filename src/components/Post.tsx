@@ -14,7 +14,7 @@ export default function Post(props: Props) {
       <div className="mb-4">
         <div className="flex items-center mb-2">
           <Link href={`/profile/${post.authorId}`}>
-            <img
+            <Image
               className="w-10 h-10 rounded-full mr-2"
               src={post.autor.profile?.profileImgUrl}
               alt="User Avatar"

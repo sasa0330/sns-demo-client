@@ -1,4 +1,5 @@
 import apiClient from "@/lib/apiClient";
+import Image from "next/image";
 import { GetServerSideProps } from "next/types";
 import React from "react";
 import { PostType, Profile } from "../../types";
@@ -35,10 +36,10 @@ const userProfile = ({ profile, posts }: Props) => {
         <div className="w-full max-w-xl mx-auto">
           <div className="bg-white shadow-md rounded-lg p-6 mb-4">
             <div className="flex items-center">
-              <img
+              <Image
                 className="w-20 h-20 rounded-full mr-4"
-                alt="User Avatar"
                 src={profile.profileImgUrl}
+                alt="User Avatar"
               />
               <div>
                 <h2 className="text-2xl font-semibold mb-1">
