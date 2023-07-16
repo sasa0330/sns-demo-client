@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 export default function Navbar() {
   const { user, logout } = useAuth();
   console.log("user" + user);
+
   return (
     <header className="bg-gray-700 p-4 text-white">
       <div className="container mx-auto flex justify-between items-center">
@@ -17,14 +18,15 @@ export default function Navbar() {
               {user ? (
                 <>
                   <div className="bg-white text-gray-900 py-2 px-3 rounded-lg font-medium">
-                    プロフィール
+                    <Link href={`/profile/${user.id}`}>プロフィール</Link>
                   </div>
-                  <button
+                  <Link
                     className="bg-white text-gray-900 py-2 px-3 rounded-lg font-medium"
+                    href="/login"
                     onClick={() => logout()}
                   >
                     ログアウト
-                  </button>
+                  </Link>
                 </>
               ) : (
                 <>

@@ -28,6 +28,7 @@ export default function Timeline() {
       const newPost = await apiClient.post("/posts/post", {
         content: postText,
       });
+      console.log(newPost);
       setLatestPost((prevPosts) => [newPost.data, ...prevPosts]);
       setPostText("");
     } catch (err) {

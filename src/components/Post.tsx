@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
+import Image from "next/image";
 import { PostType } from "../types";
+import Link from "next/link";
 
 type Props = {
   post: PostType;
@@ -11,11 +13,13 @@ export default function Post(props: Props) {
     <div className="bg-white shadow-md rounded p-4 mb-4">
       <div className="mb-4">
         <div className="flex items-center mb-2">
-          <img
-            className="w-10 h-10 rounded-full mr-2"
-            src="https://via.placeholder.com/150"
-            alt="User Avatar"
-          />
+          <Link href={`/profile/${post.authorId}`}>
+            <img
+              className="w-10 h-10 rounded-full mr-2"
+              src={post.autor.profile?.profileImgUrl}
+              alt="User Avatar"
+            />
+          </Link>
           <div>
             <h2 className="font-semibold text-md">{post.autor?.username}</h2>
             <p className="text-gray-500 text-sm">
